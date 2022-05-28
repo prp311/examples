@@ -1,0 +1,25 @@
+
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: busybox
+
+  labels:
+    run: busybox
+
+spec:
+
+  containers:
+  - name: busybox
+    image: busybox
+
+    volumeMounts:
+    - name: testvol1
+      mountPath: /vol1/
+
+  volumes:
+    - name: testvol1
+      hostPath:
+        path: /tmp/hostdir
+        type: Directory

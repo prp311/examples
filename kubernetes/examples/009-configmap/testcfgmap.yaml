@@ -1,0 +1,14 @@
+apiVersion: v1
+data:
+  app: front-end
+  type: java
+  job.properties: |
+          skill: cpp
+          exp: 6
+  physic.properties: |
+          height: 172
+          weight: 69
+kind: ConfigMap
+metadata:
+  name: testconfigmap2
+  namespace: default
